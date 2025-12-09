@@ -16,6 +16,14 @@
             Point p1 = new Point(10, 20);
 
             Return<long> numberLong = ParseLong("123");
+            if (numberLong.IsSuccess)
+            {
+                Console.WriteLine($"Erfolgreich geparst: {numberLong.Value}");
+            }
+            else
+            {
+                Console.WriteLine("Fehler beim Parsen");
+            }
 
             Return<long> result1 = from a in ParseLong("10") from b in ParseLong("5") select a + b;
 
