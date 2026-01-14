@@ -43,7 +43,7 @@
 
         private static Return<long> ParseLong(string? value)
         {
-            if (int.TryParse(value, out var n))
+            if (long.TryParse(value, out var n))
             {
                 return Return<long>.Success(n);
             }
