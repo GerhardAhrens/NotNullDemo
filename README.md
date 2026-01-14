@@ -13,7 +13,7 @@ Hierzu wurde die Klasse **Return\<T>** erstellt, die als Wrapper für Rückgabewer
 ```csharp
 private static Return<long> ParseLong(string? value)
 {
-    if (int.TryParse(value, out var n))
+    if (long.TryParse(value, out var n))
     {
         return Return<long>.Success(n);
     }
